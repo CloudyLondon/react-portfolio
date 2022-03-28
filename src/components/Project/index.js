@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import Modal from "./Modal";
 const Project = () => {
   // const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentPhoto, setCurrentPhoto] = useState();
+  // const [currentPhoto, setCurrentPhoto] = useState();
   const [photos] = useState([
     {
       name: "Lazeat!",
@@ -10,12 +10,12 @@ const Project = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
     },
     {
-      name: "Runbuddy",
+      name: "Run Buddy!",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
     },
     {
-      name: "loading",
+      name: "and more...",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
     },
@@ -62,6 +62,7 @@ const Project = () => {
                   src={require(`../../assets/${i}.jpg`)}
                   //src={nerd}
                   alt={image.name}
+                  style={{ width: "50%" }}
                   className="card-img-top img-thumbnail p-1"
                   // onClick={() => toggleModal(image, i)}
                   key={image.name}
