@@ -1,15 +1,15 @@
 import React from "react";
-// import coverImage from "../../assets/cover/cover-image.jpg";
+import coverImage from "../../assets/cover/image-of-me.jpg";
 function Header() {
   return (
     <section className="my-5">
       <h1 id="header">Jovial Chan</h1>
-      {/* <img
+      <img
         src={coverImage}
         className="my-2"
-        style={{ width: "100%" }}
+        style={{ width: "50%" }}
         alt="cover"
-      /> */}
+      />
       <div className="my-2">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec

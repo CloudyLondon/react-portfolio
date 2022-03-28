@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
@@ -18,7 +18,7 @@ function Nav(props) {
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
-          Jovial Chan!
+          Jovial Chan :)
         </a>
       </h2>
 

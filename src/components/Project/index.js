@@ -1,144 +1,77 @@
 import React, { useState } from "react";
-// import Modal from "../Modal";
-const Project = ({ category }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+// import Modal from "./Modal";
+const Project = () => {
+  // const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentPhoto, setCurrentPhoto] = useState();
   const [photos] = useState([
     {
-      name: "Grocery aisle",
-      category: "commercial",
+      name: "Lazeat!",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
     },
     {
-      name: "Grocery booth",
-      category: "commercial",
+      name: "Runbuddy",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
     },
     {
-      name: "Building exterior",
-      category: "commercial",
+      name: "loading",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
     },
-    {
-      name: "Restaurant table",
-      category: "commercial",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Cafe interior",
-      category: "commercial",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Cat green eyes",
-      category: "portraits",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Green parrot",
-      category: "portraits",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Yellow macaw",
-      category: "portraits",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Pug smile",
-      category: "portraits",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Pancakes",
-      category: "food",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Burrito",
-      category: "food",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Scallop pasta",
-      category: "food",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Burger",
-      category: "food",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Fruit bowl",
-      category: "food",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Green river",
-      category: "landscape",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Docks",
-      category: "landscape",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Panoramic village by sea",
-      category: "landscape",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Domestic landscape",
-      category: "landscape",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
-    {
-      name: "Park bench",
-      category: "landscape",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    },
+    // {
+    //   name: "Activently",
+    //   category: "project",
+    //   description:
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
+    // },
   ]);
-  const currentPhotos = photos.filter((photo) => photo.category === category);
-  const toggleModal = (image, i) => {
-    setCurrentPhoto({ ...image, index: i });
-    setIsModalOpen(!isModalOpen);
-  };
+  // const toggleModal = (image, i) => {
+  //   setCurrentPhoto({ ...image, index: i });
+  //   // setIsModalOpen(!isModalOpen);
+  // };
   return (
+    // <div>
+    //   {isModalOpen && (
+    //     <Modal onClose={toggleModal} currentPhoto={currentPhoto} />
+    //   )}
+    //   <div className="flex-row">
+    //     {
+    //       (photos.map = currentPhoto((image, i) => (
+    //         <img
+    //           src={require(`../../assets/${i}.jpg`)}
+    //           alt={image.name}
+    //           className="img-thumbnail mx-1"
+    //           onClick={() => toggleModal(image, i)}
+    //           key={image.name}
+    //         />
+    //       )))
+    //     }
+    //   </div>
+    // </div>
     <div>
       {/* {isModalOpen && (
-        // <Modal onClose={toggleModal} currentPhoto={currentPhoto} />
+        <Modal onClose={toggleModal} currentPhoto={currentPhoto} />
       )} */}
-      <div className="flex-row">
-        {/* {currentPhotos.map((image, i) => (
-          // <img
-          //   src={require(`../../assets/small/${category}/${i}.jpg`).default}
-          //   alt={image.name}
-          //   className="img-thumbnail mx-1"
-          //   onClick={() => toggleModal(image, i)}
-          //   key={image.name}
-          // />
-        ))} */}
+      <div className="row">
+        <div className="card-group ">
+          {photos.map((image, i) => (
+            <>
+              <div className="col-4 bg-success bg-opacity-25 p-3 border ">
+                <img
+                  src={require(`../../assets/${i}.jpg`)}
+                  //src={nerd}
+                  alt={image.name}
+                  className="card-img-top img-thumbnail p-1"
+                  // onClick={() => toggleModal(image, i)}
+                  key={image.name}
+                />
+                <h5>{image.name}</h5>
+                <p>{image.description}</p>
+              </div>
+            </>
+          ))}
+        </div>
       </div>
     </div>
   );

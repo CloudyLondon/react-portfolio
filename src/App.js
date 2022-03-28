@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
-import React, { useState } from "react";
+import React from "react";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Project from "./components/Project";
@@ -19,14 +19,6 @@ function App() {
       <main>
         <Header></Header>
         <Project></Project>
-        {/* {!contactSelected ? (
-          <>
-            <Project currentCategory={currentCategory}></Project>
-            <Header></Header>
-          </>
-        ) : (
-          
-        )} */}
         <Footer></Footer>
       </main>
     </div>
