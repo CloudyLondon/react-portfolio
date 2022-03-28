@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+// import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
   const {
@@ -10,34 +10,55 @@ function Nav(props) {
     setContactSelected,
   } = props;
 
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentCategory.name);
-  }, [currentCategory]);
+  // useEffect(() => {
+  //   document.title = capitalizeFirstLetter(currentCategory.name);
+  // }, [currentCategory]);
 
   return (
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
-          <span role="img" aria-label="camera">
-            {" "}
-            📸
-          </span>{" "}
           Jovial Chan!
         </a>
       </h2>
+
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
             <a
-              data-testid="about"
+              data-testid="header"
               href="#about"
               onClick={() => setContactSelected(false)}
             >
               About me
             </a>
           </li>
-          <li className={`mx-2 ${contactSelected && "navActive"}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+          <li className="mx-2">
+            <a
+              data-testid="contact"
+              href="#contact"
+              onClick={() => setContactSelected(false)}
+            >
+              Contact me
+            </a>
+          </li>
+          <li className="mx-2">
+            <a
+              data-testid="resume"
+              href="#resume"
+              onClick={() => setContactSelected(false)}
+            >
+              My Resume
+            </a>
+          </li>
+          <li className="mx-2">
+            <a
+              data-testid="project"
+              href="#project"
+              onClick={() => setContactSelected(false)}
+            >
+              My Projects
+            </a>
           </li>
           {categories.map((category) => (
             <li
@@ -54,7 +75,7 @@ function Nav(props) {
                   setContactSelected(false);
                 }}
               >
-                {capitalizeFirstLetter(category.name)}
+                {/* {capitalizeFirstLetter(category.name)} */}
               </span>
             </li>
           ))}

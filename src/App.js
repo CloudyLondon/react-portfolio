@@ -7,7 +7,30 @@ import Project from "./components/Project";
 import Footer from "./components/Footer";
 
 function App() {
-  return <div className="App"> //TODO: write html, routes and components</div>;
+  return (
+    <div className="App">
+      <Nav
+      // categories={categories}
+      // setCurrentCategory={setCurrentCategory}
+      // currentCategory={currentCategory}
+      // contactSelected={contactSelected}
+      // setContactSelected={setContactSelected}
+      ></Nav>
+      <main>
+        <Header></Header>
+        <Project></Project>
+        {/* {!contactSelected ? (
+          <>
+            <Project currentCategory={currentCategory}></Project>
+            <Header></Header>
+          </>
+        ) : (
+          
+        )} */}
+        <Footer></Footer>
+      </main>
+    </div>
+  );
 }
 
 export default App;
